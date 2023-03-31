@@ -1,0 +1,11 @@
+#修改访问端口
+server:
+  port: 8089
+
+#  视图解析器
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: /templates/
+
