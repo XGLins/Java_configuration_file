@@ -53,7 +53,7 @@ FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据�
 </dependency>
 ```
 
-​		在application.yml中进行下列配置
+​		freemarker（模板引擎）在application.yml中进行下列配置
 
 ```yml
 #配置 freemarker
