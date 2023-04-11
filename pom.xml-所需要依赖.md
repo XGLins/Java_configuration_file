@@ -58,8 +58,6 @@ mybatis-plus:
 #spring.servlet.multipart.max-request-size=200MB
 ```
 
-
-
 ## 2. thymeleaf（数据渲染到前端）
 
 ```xml
@@ -69,6 +67,12 @@ mybatis-plus:
     <artifactId>thymeleaf-spring5</artifactId>
     <version>3.0.13.RELEASE</version>
 </dependency>
+```
+
+前端 .html中需要加上一个标签
+
+```html
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
 ```
 
 ## 3. freemarker（模板引擎）
