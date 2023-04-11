@@ -30,6 +30,36 @@
 </dependency>
 ```
 
+Mybatis-plus在application.yml中进行下列配置
+
+```yml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/stu_score?serverTimezone=Asia/Shanghai&characterEncoding=utf-8&useSSL=false
+    #    jdbc:mysql://address=(protocol=tcp)(host=fe80::a00:27ff:fec3:87c7)(port=3306)/database
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 200MB
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+    # 如果是放在src/main/java目录下 classpath:/com/*/*/mapper/*Mapper.xml
+    # 如果是放在resource目录 classpath:/mapper/**.xml
+  mapper-locations: classpath:/mapper/**.xml
+#spring.servlet.multipart.enabled=true
+#spring.servlet.multipart.max-file-size=20MB
+#spring.servlet.multipart.max-request-size=200MB
+```
+
+
+
 ## 2. thymeleaf（数据渲染到前端）
 
 ```xml
@@ -63,5 +93,36 @@ spring:
     charset: UTF-8  #字符集
     template-loader-path: "classpath:/templates/" #去哪里找视图
     suffix: .html #找已什么结尾的视图
+```
+
+## 4. Mybatis（连接数据库）
+
+```xml
+<!--Mybatis数据库-->
+        <!--mybatis启动器-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <!--数据库连接的依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+            <scope>runtime</scope>
+        </dependency>
+```
+
+Mybatis在application.yml中进行下列配置
+
+```yml
+#连接数据库
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/java_practice?serverTimezone=Asia/Shanghai&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
 ```
 
