@@ -14,7 +14,7 @@
     -->
 
     <!--List<User> getAll();-->
-    <select id="getAll">
+    <select id="getAll" resultType="com.xing.springmvcdemo230410.entity.User">
         <!--使用#符号可以防止sql注入，因为他是采用占位符的方式赋值，无形中可以理解为加密-->
         select * from user where UserName = #{userName}
         <!--使用$符号，不安全，不能防止sql注入-->
