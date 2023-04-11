@@ -122,7 +122,14 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/java_practice?serverTimezone=Asia/Shanghai&characterEncoding=utf-8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
-    username: root
+    username: root 
     password: 123456
+```
+
+​		当mysql查询语句是使用xml配置的形式（在resources下的mapper包下的xxx-Mapper.xml）时，需要在application.yml中配置路径
+
+```yml
+mybatis:
+  mapper-locations: classpath:/mapper/**.xml
 ```
 
