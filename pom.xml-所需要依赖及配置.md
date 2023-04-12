@@ -1,6 +1,6 @@
 # **pom.xml-所需要依赖**
 
-## 1. mybatis-plus（连接数据库）
+## 🍓1. mybatis-plus（连接数据库）
 
 ```xml
 <!--连接数据库-->
@@ -58,7 +58,7 @@ mybatis-plus:
 #spring.servlet.multipart.max-request-size=200MB
 ```
 
-## 2. thymeleaf（数据渲染到前端）
+## 🍓2. thymeleaf（数据渲染到前端）
 
 ```xml
 <!-- 引入thymeleaf的依赖-->
@@ -75,7 +75,7 @@ mybatis-plus:
 <!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
 ```
 
-## 3. freemarker（视图解析-模板引擎）
+## 🍓3. freemarker（视图解析-模板引擎）
 
 FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 是一个Java类库。
 
@@ -99,7 +99,7 @@ spring:
     suffix: .html #找已什么结尾的视图
 ```
 
-## 4. Mybatis（连接数据库）
+## 🍓4. Mybatis（连接数据库）
 
 ```xml
 <!--Mybatis数据库-->
