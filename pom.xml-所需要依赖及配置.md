@@ -75,7 +75,7 @@ mybatis-plus:
 <!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
 ```
 
-## 3. freemarker（模板引擎）
+## 3. freemarker（视图解析-模板引擎）
 
 FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 是一个Java类库。
 
@@ -87,7 +87,7 @@ FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据�
 </dependency>
 ```
 
-​		freemarker（模板引擎）在application.yml中进行下列配置
+​		freemarker（视图解析-模板引擎）在application.yml中进行下列配置
 
 ```yml
 #配置 freemarker
