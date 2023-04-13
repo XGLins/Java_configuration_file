@@ -4,8 +4,8 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--mapper表示根标签-->
-<!--com.xing.springmvcdemo230410.mapper.UserMapper（UserMapper是接口）-->
-<mapper namespace="com.xing.springmvcdemo230410.mapper.UserMapper">
+<!--com.huinong.mapper.UserMapper 表示mapper中的接口-->
+<mapper namespace="com.xing.springmvcstatic_js_importdemo.mapper.UserMapper">
 
     <!--
         mapper接口和映射文件要保持一致
@@ -13,12 +13,9 @@
         2.mapper接口中的方法的方法名要和映射文件中的sql的id保持一致
     -->
 
-    <!--List<User> getAll();-->
-    <select id="getAll" resultType="com.xing.springmvcdemo230410.entity.User">
-        <!--使用#符号可以防止sql注入，因为他是采用占位符的方式赋值，无形中可以理解为加密-->
-        select * from user where UserName = #{userName}
-        <!--使用$符号，不安全，不能防止sql注入-->
-        <!--select * from user where UserName = ${userName}-->
+    <!--//根据姓名去查询用户 User getUserByName(String name);-->
+    <select id="getUserByName" resultType="com.xing.springmvcstatic_js_importdemo.entity.User" parameterType="String">
+        select * from User where username = '${user}';
     </select>
 
 
